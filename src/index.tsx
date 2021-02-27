@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
+import { ThemeProvider } from 'styled-components';
 import App from './App';
+import CustomTheme from './theme';
+
 
 ReactDOM.render(
-  <App />,
+  <ThemeProvider theme={CustomTheme}>
+    <App />
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
